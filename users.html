@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo App</title>
+    <script src="assets/scripts/users.js" defer></script>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.1/axios.min.js"></script>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+  </head>
+  <body>
+    <template id="users-template">
+      <div>
+        <li
+          id="user-info"
+          class="flex box-border border-2 border-grey-200 bg-white p-10 rounded-lg m-4"
+        >
+          <div class="flex-row">
+            <div class="flex flex-col">
+              <h3
+                id="title"
+                class="text-indigo-800 text-2xl font-bold font-sans"
+              ></h3>
+              <h2 class="text-indigo-800 text-2xl font-bold font-sans"></h2>
+              <p class="text-black text-sm font-medium"></p>
+              <a href="" class="text-blue text-sm font-medium"></a>
+            </div>
+            <div id="address">
+              <p class="flex flex-1 text-black text-sm font-medium"></p>
+            </div>
+          </div>
+
+          <div class="flex-row flex-1">
+            <div id="company" class="flex flex-col">
+              <h3
+                class="flex justify-end text-indigo-800 text-2xl font-bold font-sans"
+              ></h3>
+              <h2
+                class="flex justify-end text-indigo-800 text-2xl font-bold font-sans"
+              ></h2>
+              <p class="flex justify-end text-black text-sm font-medium"></p>
+              <a
+                href=""
+                class="flex justify-end text-blue text-sm font-medium"
+              ></a>
+              <div class="flex justify-end pt-10">
+                <button class="flex-row w-24">
+                  <a
+                    id="nav-btn"
+                    class="block w-28 bg-white text-black text-xl mt-4 py-2 rounded-2xl font-bold mb-2"
+                    >Details<span aria-hidden="true">→</span></a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </div>
+    </template>
+
+    <template id="user-template">
+      <tr class="text-gray-500 text-md bg-white">
+        <td class="text-gray-500 p-1 px-2"></td>
+        <td class="p-1 px-2"></td>
+        <td class="p-1 px-2"></td>
+        <td class="p-1 px-2"></td>
+        <td class="p-1 px-2"></td>
+        <td class="p-1 px-2"></td>
+        <td class="p-1 px-2"></td>
+        <td class="p-1 px-2"></td>
+        <td class="p-1 px-2">
+          <button
+            class="rounded-md w-24 bg-gradient-to-tr from-blue-800 to-purple-700 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            <a>Preview</a>
+          </button>
+        </td>
+      </tr>
+    </template>
+    <header>
+      <ul class="flex bg-black pt-5 justify-end">
+        <li class="flex-row w-24 text-white font-medium text-4md">
+          <a href="index.html"> Posts</a>
+        </li>
+        <li class="flex-row text-white w-24 font-medium text-4md">
+          <a href="albums.html"> Albums</a>
+        </li>
+        <li class="flex-row text-white w-24 font-medium text-4md">
+          <a href="users.html"> Users</a>
+        </li>
+        <button
+          class="flex-row w-28 bg-white text-black py-2 rounded-2xl font-bold mb-3 mr-4"
+        >
+          Get Statrted
+        </button>
+      </ul>
+    </header>
+
+    <section>
+      <div class="px-10 box-border m-20">
+        <div class="h-1000">
+          <table class="table-header">
+            <tr class="text-gray-500 bg-gray-200">
+              <th class="p-1 text-justify">Id</th>
+              <th class="p-1 text-justify">Name</th>
+              <th class="p-1 text-justify">Username</th>
+              <th class="p-1 text-justify">Email</th>
+              <th class="p-1 text-justify">Contact Number</th>
+              <th class="p-1 text-justify">Website</th>
+              <th class="p-1 text-justify">Company</th>
+              <th class="p-1 text-justify">Address</th>
+              <th class="p-1 text-justify">User Profile</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

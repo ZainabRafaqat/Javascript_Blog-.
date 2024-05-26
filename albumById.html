@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo App</title>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.1/axios.min.js"></script>
+    <script src="assets/scripts/albumById.js" defer></script>
+
+</head>
+<body>
+    <template id="image-template">
+        <li class="p-5 boreder-box border-2 border-grey-200 ">
+            <div class="relative pb-48 overflow-hidden">
+                <img src="" class="absolute inset-0 h-full w-full object-cover" ></img>
+            </div>
+            <h class="text-black-800 text-xl font-bold font-sans"></h><br>
+            <div class="flex justify-end">
+                <button class="flex-row block w-28 bg-indigo-800 text-white mt-4 py-2 rounded-lg font-medium mb-2"><a>Preview</a></button>
+            </div>
+        
+        </li>
+      
+    </template>
+   
+    <header >
+        <ul class="flex  bg-black pt-5 justify-end">
+            <li class=" flex-row w-24 text-white font-medium text-4md"><a href="index.html" > Posts</a></li>
+            <li class="flex-row text-white w-24 font-medium text-4md"><a href="albums.html" > Albums</a></li> 
+            <li class="flex-row text-white w-24 font-medium text-4md"><a href="users.html" > Users</a></li>
+            <button class=" flex-row w-28 bg-white text-black  py-2 rounded-2xl font-bold  mb-3 mr-4">Get Statrted</button>
+            
+        </ul>
+    </header>
+    <section >
+        <div class="container  mx-auto h-full px-20 py-10 rounded-2xl ">
+        <ul id="image-list" class=" grid grid-cols-3 gap-4 content-start "></ul>
+    </div>
+    
+    </section>
+
+ 
+   
+
+</body>
